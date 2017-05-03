@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fisica 1 - Cinemática</title>
+    <link rel="stylesheet" href="parcialstyle.css">
+
+</head>
+<body>
+<header>
+    <img src="imagenes/4.png" id="logo">
+</header>
+<a href="Acerca.html" target="_self">
+    <button type="button" class="boton1" >Acerca de</button>
+</a>
+
+<a href="Ayuda.html" target="_self">
+    <button type="button" class="boton2">Ayuda</button>
+</a>
+
+<div id="Cálculo">
+
+    <div id="parametros">
+
+        <form action="">
+
+            <h1>Cinemática</h1>
+            <table>
+                <tr>
+                    <td>
+                        <input type="radio" name="cine" value="mru">MRU<br>
+                        <input type="radio" name="cine" value="mruv">MRUV<br>
+                        <input type="radio" name="cine" value="encuentro">ENCUENTRO<br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+
+        <u>Objeto 1</u>
+        <br><br>
+
+        <label for="Xo">Distancia inicial (Xo)</label>
+        <br>
+        <input type="text" name="Xo" id="Xo">
+        <label>
+            <select name="unidadXo">
+                <option value="Kilometros">Kilometros</option>
+                <option value="Metros">Metros</option>
+                <option value="Centimetros">Centimetros</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label for="Vo">Velocidad inicial (Vo)</label>
+        <br>
+        <input type="text" name="Vo" id="Vo">
+        <label>
+            <select name="unidadVo">
+                <option value="m/s">m/s</option>
+                <option value="k/h">k/h</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label for="t">Tiempo (t)</label>
+        <br>
+        <input type="text" name="t" id="t">
+        <label>
+            <select name="unidadt">
+                <option value="s">Segundos</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label for="a">Aceleracion</label>
+        <br>
+        <input type="text" name="a" id="a">
+        <label>
+            <select name="unidada">
+                <option value="m/s2">m/s2</option>
+            </select>
+        </label>
+        <br><br>
+
+        <u>Objeto 2</u>
+        <br><br>
+
+        <label for="Xo2">Distancia inicial (Xo)</label>
+        <br>
+        <input type="text" name="Xo2" id="Xo2">
+        <label>
+            <select name="unidadXo">
+                <option value="Kilometros">Kilometros</option>
+                <option value="Metros">Metros</option>
+                <option value="Centimetros">Centimetros</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label for="Vo2">Velocidad inicial (Vo)</label>
+        <br>
+        <input type="text" name="Vo2" id="Vo2">
+        <label>
+            <select name="unidadVo">
+                <option value="m/s">m/s</option>
+                <option value="k/h">k/h</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label for="t2">Tiempo (t)</label>
+        <br>
+        <input type="text" name="t2" id="t2">
+        <label>
+            <select name="unidadt">
+                <option value="s">Segundos</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label for="a2">Aceleracion</label>
+        <br>
+        <input type="text" name="a2" id="a2">
+        <label>
+            <select name="unidada">
+                <option value="m/s2">m/s2</option>
+            </select>
+        </label>
+        <br><br>
+
+        <input type="button" name="boton" class="botonc" value="Calcular">
+    </div>
+
+    <div id="grafico">
+        <div id="grafico1">
+            <canvas id="myCanvas">
+
+            </canvas>
+        </div>
+
+        <div id="resultados">
+            <u>RESULTADOS</u>
+            <br><br>
+            <label for="Vf">Velocidad final (Vf)</label>
+            <input type="text" id="Vf" disabled>
+            <label for="X">Distancia (X)</label>
+            <input type="text" id="X" disabled>
+            <label for="Tf">Tiempo final (Tf)</label>
+            <input type="text" id="Tf" disabled>
+        </div>
+    </div>
+</div>
+</body>
+</html>

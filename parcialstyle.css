@@ -1,0 +1,125 @@
+body {
+    background: linear-gradient(to right, royalblue, dodgerblue);
+}
+#logo {
+
+    left: 20px;
+    width: 150px;
+    height: 100px;
+}
+
+#Cálculo {
+    position: fixed;
+    color: black;
+    border-style: solid;
+    border-color: mediumblue;
+    width: 1300px;
+    height: 860px;
+    top: 120px;
+    left: 10px;
+    text-align: center;
+    font-family: "Arial Black", serif;
+}
+
+#parametros {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 15px;
+    text-align: left;
+    float: left;
+    font-size: 15px;
+}
+
+#grafico {
+    margin-left: 350px;
+    padding: 20px;
+    min-width: 500px;
+    height: 815px;
+    border-style: solid;
+    border-color: mediumblue;
+}
+
+#resultados {
+    position: relative;
+    color: black;
+    width: 100px;
+    height: 50px;
+    top: 5px;
+    left: 1px;
+    text-align: left;
+    font-family: "Arial Black", serif;
+    font-size: 15px;
+}
+
+#grafico1 {
+    padding: 20px;
+    min-width: 200px;
+    height: 540px;
+    border-style: solid;
+    border-color: mediumblue;
+}
+
+.botonc {
+    border: 1px solid white;
+    font-size: 18px;
+    font-family: "Arial Black", serif;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: royalblue;
+    background: linear-gradient(left, royalblue, cornflowerblue);
+    background: -moz-linear-gradient(left, royalblue, cornflowerblue);
+    background: -webkit-linear-gradient(left, royalblue, cornflowerblue);
+    background: -o-linear-gradient(left, royalblue, cornflowerblue);
+    color: white;
+}
+
+.boton1 {
+    position: absolute;
+    top: 8px;
+    right: 90px;
+    border: 1px solid white;
+    font-size: 18px;
+    font-family: "Arial Black", serif;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: royalblue;
+    background: linear-gradient(left, royalblue, cornflowerblue);
+    background: -moz-linear-gradient(left, royalblue, cornflowerblue);
+    background: -webkit-linear-gradient(left, royalblue, cornflowerblue);
+    background: -o-linear-gradient(left, royalblue, cornflowerblue);
+    color: white;
+}
+
+.boton2 {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: 1px solid white;
+    font-size: 18px;
+    font-family: "Arial Black", serif;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: royalblue;
+    background: linear-gradient(left, royalblue, cornflowerblue);
+    background: -moz-linear-gradient(left, royalblue, cornflowerblue);
+    background: -webkit-linear-gradient(left, royalblue, cornflowerblue);
+    background: -o-linear-gradient(left, royalblue, cornflowerblue);
+    color: white;
+}
+
+table, tr, td {
+    border-style: solid;
+    border-color: mediumblue;
+}
+
+#myCanvas {
+
+}
