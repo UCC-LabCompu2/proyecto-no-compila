@@ -37,3 +37,17 @@ function reset() {
     document.getElementById("X").value="";
     document.getElementById("Tf").value="";
 }
+
+function convert_unidades(id) {
+    id=document.getElementById(id).value;
+    if(id=="Kilometros") {
+        return (1*1000);
+    }
+    if(id=="Centimetros") {
+        return (1*100);
+    }
+    if(id=="km/h") {
+        return (1000/3600);
+    }
+    return 1;
+}
