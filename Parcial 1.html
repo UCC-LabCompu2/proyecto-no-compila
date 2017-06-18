@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Fisica 1 - Cinemática</title>
     <link rel="stylesheet" href="parcialstyle.css">
+    <script type="text/javascript" src="misFunciones.js"></script>
 
 </head>
 <body>
@@ -28,9 +29,9 @@
             <table>
                 <tr>
                     <td>
-                        <input type="radio" name="cine" value="mru">MRU<br>
-                        <input type="radio" name="cine" value="mruv">MRUV<br>
-                        <input type="radio" name="cine" value="encuentro">ENCUENTRO<br>
+                        <input type="radio" name="cine" value="mru" onchange="mostrar_ob2(this.value)">MRU<br>
+                        <input type="radio" name="cine" value="mruv" onchange="mostrar_ob2(this.value)">MRUV<br>
+                        <input type="radio" name="cine" value="encuentro" onchange="mostrar_ob2(this.value)">ENCUENTRO<br>
                     </td>
                 </tr>
             </table>
@@ -83,6 +84,7 @@
         </label>
         <br><br>
 
+        <div id="objeto2">
         <u>Objeto 2</u>
         <br><br>
 
@@ -128,8 +130,9 @@
             </select>
         </label>
         <br><br>
-
+        </div>
         <input type="button" name="boton" class="botonc" value="Calcular">
+
     </div>
 
     <div id="grafico">
