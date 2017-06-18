@@ -41,7 +41,7 @@
         <u>Objeto 1</u>
         <br><br>
 
-        <label for="Xo">Distancia inicial (Xo)</label>
+        <div id="1"><label for="Xo">Distancia inicial (Xo)</label>
         <br>
         <input type="text" name="Xo" id="Xo" onchange="verifvaloringresado(this.id)">
         <label>
@@ -52,8 +52,8 @@
             </select>
         </label>
         <br><br>
-
-        <label for="Vo">Velocidad inicial (Vo)</label>
+        </div>
+        <div id="2"><label for="Vo">Velocidad inicial (Vo)</label>
         <br>
         <input type="text" name="Vo" id="Vo" onchange="verifvaloringresado(this.id)">
         <label>
@@ -63,8 +63,8 @@
             </select>
         </label>
         <br><br>
-
-        <label for="t">Tiempo (t)</label>
+        </div>
+        <div id="3"><label for="t">Tiempo (t)</label>
         <br>
         <input type="text" name="t" id="t" onchange="verifvaloringresado(this.id)">
         <label>
@@ -73,7 +73,7 @@
             </select>
         </label>
         <br><br>
-
+        </div>
         <div id="ace">
         <label for="a">Aceleracion</label>
         <br>
@@ -89,7 +89,7 @@
         <u>Objeto 2</u>
         <br><br>
 
-        <label for="Xo2">Distancia inicial (Xo)</label>
+        <label for="Xo2">Distancia entre Objetos (Xo)</label>
         <br>
         <input type="text" name="Xo2" id="Xo2" onchange="verifvaloringresado(this.id)">
         <label>
@@ -101,7 +101,7 @@
         </label>
         <br><br>
 
-        <label for="Vo2">Velocidad inicial (Vo)</label>
+        <label for="Vo2">Velocidad Objeto 2 (Vo)</label>
         <br>
         <input type="text" name="Vo2" id="Vo2" onchange="verifvaloringresado(this.id)">
         <label>
@@ -112,25 +112,6 @@
         </label>
         <br><br>
 
-        <label for="t2">Tiempo (t)</label>
-        <br>
-        <input type="text" name="t2" id="t2" onchange="verifvaloringresado(this.id)">
-        <label>
-            <select name="unidadt2" id="unidadt2">
-                <option value="s">Segundos</option>
-            </select>
-        </label>
-        <br><br>
-
-        <label for="a2">Aceleracion</label>
-        <br>
-        <input type="text" name="a2" id="a2" onchange="verifvaloringresado(this.id)">
-        <label>
-            <select name="unidada2" id="unidada2">
-                <option value="m/s2">m/s2</option>
-            </select>
-        </label>
-        <br><br>
         </div>
         <input onclick="calculo()" type="button" name="boton" class="botonc" value="Calcular">
         <input onclick="reset()" type="button" name="boton" class="botonc" value="Resetear">
@@ -151,6 +132,9 @@
             <div><output id="Xr"></output></div>
             <div><output id="Tfr"></output></div>
             <div><output id="Af"></output></div>
+            <div><output id="Te"></output></div>
+            <div><output id="D1"></output></div>
+            <div><output id="D2"></output></div>
         </div>
     </div>
 </div>
