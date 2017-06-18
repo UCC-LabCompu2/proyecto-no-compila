@@ -13,10 +13,12 @@ function mostrar_ob2(accion) {
     else if (accion=="mru"){
         console.log("ocultar");
         document.getElementById('objeto2').style.display = 'none';
+        document.getElementById('ace').style.display = 'none';
     }
     if (accion=="mruv"){
         console.log("ocultar");
         document.getElementById('objeto2').style.display = 'none';
+        document.getElementById('ace').style.display = 'block';
     }
 }
 
@@ -33,9 +35,9 @@ function reset() {
     document.getElementById("Vo2").value="";
     document.getElementById("t2").value="";
     document.getElementById("a2").value="";
-    document.getElementById("Vf").value="";
-    document.getElementById("X").value="";
-    document.getElementById("Tf").value="";
+    document.getElementById("Vfr").value="";
+    document.getElementById("Xr").value="";
+    document.getElementById("Tfr").value="";
 }
 
 function convert_unidades(id) {
@@ -52,7 +54,7 @@ function convert_unidades(id) {
     return 1;
 }
 
-function verificarvaloringresado(id) {
+function verifvaloringresado(id) {
     var i = document.getElementById(id).value;
     if (isNaN(i)) {
         alert("Se ingreso un valor invalido en " + id);
@@ -62,4 +64,33 @@ function verificarvaloringresado(id) {
         alert("Los valores no pueden ser negativos");
         document.getElementById(id).value = "";
     }
+}
+
+function calculo() {
+    var x=document.getElementById("mru");
+    var y=document.getElementById("mruv");
+    var z=document.getElementById("encuentro");
+    var Xo=Number(document.getElementById("Xo").value) * convert_unidades("unidadXo");
+    var Vo=Number(document.getElementById("Vo").value) * convert_unidades("unidadVo");
+    var t=Number(document.getElementById("t").value);
+    var a=Number(document.getElementById("a").value);
+
+    if(x){
+        var Xf=Xo+Vo*t;
+        var Vf=(Xf-Xo)/t;
+        document.getElementById("Vfr").innerHTML="Velocidad="+Vf+"m/s";
+        document.getElementById("Xr").innerHTML="Distancia="+Xf+"metros";
+    }
+
+
+    if(y){
+        var Xfv=Xo+Vo*t+1/2*a*(t*t);
+        var Vfv=Vo+a*t;
+        var av=(Vfv-Vo)/(t);
+        document.getElementById("Vfr").innerHTML="Velocidad="+Vfv+"m/s";
+        document.getElementById("Xr").innerHTML="Distancia="+Xfv+"metros";
+        document.getElementById("Af").innerHTML="Aceleracion="+av+"m/s";
+    }
+
+    
 }

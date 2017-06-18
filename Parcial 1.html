@@ -29,9 +29,9 @@
             <table>
                 <tr>
                     <td>
-                        <input type="radio" name="cine" value="mru" onchange="mostrar_ob2(this.value)">MRU<br>
-                        <input type="radio" name="cine" value="mruv" onchange="mostrar_ob2(this.value)">MRUV<br>
-                        <input type="radio" name="cine" value="encuentro" onchange="mostrar_ob2(this.value)">ENCUENTRO<br>
+                        <input id="mru" type="radio" name="cine" value="mru" onchange="mostrar_ob2(this.value)">MRU<br>
+                        <input id="mruv" type="radio" name="cine" value="mruv" onchange="mostrar_ob2(this.value)">MRUV<br>
+                        <input id="encuentro" type="radio" name="cine" value="encuentro" onchange="mostrar_ob2(this.value)">ENCUENTRO<br>
                     </td>
                 </tr>
             </table>
@@ -43,11 +43,11 @@
 
         <label for="Xo">Distancia inicial (Xo)</label>
         <br>
-        <input type="text" name="Xo" id="Xo">
+        <input type="text" name="Xo" id="Xo" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidadXo">
-                <option value="Kilometros">Kilometros</option>
+            <select name="unidadXo" id="unidadXo">
                 <option value="Metros">Metros</option>
+                <option value="Kilometros">Kilometros</option>
                 <option value="Centimetros">Centimetros</option>
             </select>
         </label>
@@ -55,9 +55,9 @@
 
         <label for="Vo">Velocidad inicial (Vo)</label>
         <br>
-        <input type="text" name="Vo" id="Vo">
+        <input type="text" name="Vo" id="Vo" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidadVo">
+            <select name="unidadVo" id="unidadVo">
                 <option value="m/s">m/s</option>
                 <option value="k/h">k/h</option>
             </select>
@@ -66,35 +66,36 @@
 
         <label for="t">Tiempo (t)</label>
         <br>
-        <input type="text" name="t" id="t">
+        <input type="text" name="t" id="t" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidadt">
+            <select name="unidadt" id="unidadt">
                 <option value="s">Segundos</option>
             </select>
         </label>
         <br><br>
 
+        <div id="ace">
         <label for="a">Aceleracion</label>
         <br>
-        <input type="text" name="a" id="a">
+        <input type="text" name="a" id="a" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidada">
+            <select name="unidada" id="unidada">
                 <option value="m/s2">m/s2</option>
             </select>
         </label>
         <br><br>
-
+        </div>
         <div id="objeto2">
         <u>Objeto 2</u>
         <br><br>
 
         <label for="Xo2">Distancia inicial (Xo)</label>
         <br>
-        <input type="text" name="Xo2" id="Xo2">
+        <input type="text" name="Xo2" id="Xo2" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidadXo">
-                <option value="Kilometros">Kilometros</option>
+            <select name="unidadXo2" id="unidadXo2">
                 <option value="Metros">Metros</option>
+                <option value="Kilometros">Kilometros</option>
                 <option value="Centimetros">Centimetros</option>
             </select>
         </label>
@@ -102,9 +103,9 @@
 
         <label for="Vo2">Velocidad inicial (Vo)</label>
         <br>
-        <input type="text" name="Vo2" id="Vo2">
+        <input type="text" name="Vo2" id="Vo2" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidadVo">
+            <select name="unidadVo2" id="unidadVo2">
                 <option value="m/s">m/s</option>
                 <option value="k/h">k/h</option>
             </select>
@@ -113,9 +114,9 @@
 
         <label for="t2">Tiempo (t)</label>
         <br>
-        <input type="text" name="t2" id="t2">
+        <input type="text" name="t2" id="t2" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidadt">
+            <select name="unidadt2" id="unidadt2">
                 <option value="s">Segundos</option>
             </select>
         </label>
@@ -123,15 +124,15 @@
 
         <label for="a2">Aceleracion</label>
         <br>
-        <input type="text" name="a2" id="a2">
+        <input type="text" name="a2" id="a2" onchange="verifvaloringresado(this.id)">
         <label>
-            <select name="unidada">
+            <select name="unidada2" id="unidada2">
                 <option value="m/s2">m/s2</option>
             </select>
         </label>
         <br><br>
         </div>
-        <input type="button" name="boton" class="botonc" value="Calcular">
+        <input onclick="calculo()" type="button" name="boton" class="botonc" value="Calcular">
         <input onclick="reset()" type="button" name="boton" class="botonc" value="Resetear">
 
     </div>
@@ -139,19 +140,17 @@
     <div id="grafico">
         <div id="grafico1">
             <canvas id="myCanvas">
-
+                Tu navegador no soporta el tag de HTML5 canvas.
             </canvas>
         </div>
 
         <div id="resultados">
             <u>RESULTADOS</u>
-            <br><br>
-            <label for="Vf">Velocidad final (Vf)</label>
-            <input type="text" id="Vf" disabled>
-            <label for="X">Distancia (X)</label>
-            <input type="text" id="X" disabled>
-            <label for="Tf">Tiempo final (Tf)</label>
-            <input type="text" id="Tf" disabled>
+
+            <div><output id="Vfr"></output></div>
+            <div><output id="Xr"></output></div>
+            <div><output id="Tfr"></output></div>
+            <div><output id="Af"></output></div>
         </div>
     </div>
 </div>
