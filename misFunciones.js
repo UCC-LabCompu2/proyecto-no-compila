@@ -51,3 +51,15 @@ function convert_unidades(id) {
     }
     return 1;
 }
+
+function verificarvaloringresado(id) {
+    var i = document.getElementById(id).value;
+    if (isNaN(i)) {
+        alert("Se ingreso un valor invalido en " + id);
+        document.getElementById(id).value = "";
+    }
+    else if (i < 0) {
+        alert("Los valores no pueden ser negativos");
+        document.getElementById(id).value = "";
+    }
+}
