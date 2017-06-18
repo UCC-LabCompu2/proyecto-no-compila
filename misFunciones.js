@@ -19,3 +19,21 @@ function mostrar_ob2(accion) {
         document.getElementById('objeto2').style.display = 'none';
     }
 }
+
+function reset() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, c.width, c.height);
+
+    document.getElementById("Xo").value="";
+    document.getElementById("Vo").value="";
+    document.getElementById("t").value="";
+    document.getElementById("a").value="";
+    document.getElementById("Xo2").value="";
+    document.getElementById("Vo2").value="";
+    document.getElementById("t2").value="";
+    document.getElementById("a2").value="";
+    document.getElementById("Vf").value="";
+    document.getElementById("X").value="";
+    document.getElementById("Tf").value="";
+}
