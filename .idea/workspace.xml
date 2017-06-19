@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60123fbe-87b7-4a9c-91a2-e1d3b919f3da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Acerca.html" afterPath="$PROJECT_DIR$/Acerca.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ayuda.html" afterPath="$PROJECT_DIR$/Ayuda.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parcial 1.html" afterPath="$PROJECT_DIR$/Parcial 1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misFunciones.js" afterPath="$PROJECT_DIR$/misFunciones.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parcialstyle.css" afterPath="$PROJECT_DIR$/parcialstyle.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,21 +19,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parcial 1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parcial 1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Parcial 1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="1432">
+              <caret line="122" column="59" lean-forward="false" selection-start-line="122" selection-start-column="59" selection-end-line="122" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="misFunciones.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="misFunciones.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/misFunciones.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+            <state relative-caret-position="43">
+              <caret line="193" column="14" lean-forward="false" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -41,8 +42,8 @@
       <file leaf-file-name="Ayuda.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ayuda.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="374">
+              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -61,8 +62,8 @@
       <file leaf-file-name="parcialstyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parcialstyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+            <state relative-caret-position="1632">
+              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,11 +86,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Ayuda.html" />
+        <option value="$PROJECT_DIR$/Acerca.html" />
         <option value="$PROJECT_DIR$/parcialstyle.css" />
         <option value="$PROJECT_DIR$/Parcial 1.html" />
         <option value="$PROJECT_DIR$/misFunciones.js" />
-        <option value="$PROJECT_DIR$/Ayuda.html" />
-        <option value="$PROJECT_DIR$/Acerca.html" />
       </list>
     </option>
   </component>
@@ -247,12 +248,12 @@
       <workItem from="1493845450876" duration="8326000" />
       <workItem from="1497755938096" duration="2964000" />
       <workItem from="1497759613909" duration="695000" />
-      <workItem from="1497792501743" duration="28065000" />
+      <workItem from="1497792501743" duration="42995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40050000" />
+    <option name="totallyTimeSpent" value="54980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -399,26 +400,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parcialstyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/misFunciones.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ayuda.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="374">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -431,10 +416,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parcialstyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Parcial 1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="1432">
+          <caret line="122" column="59" lean-forward="false" selection-start-line="122" selection-start-column="59" selection-end-line="122" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misFunciones.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="193" column="14" lean-forward="false" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
           <folding />
         </state>
       </provider>
