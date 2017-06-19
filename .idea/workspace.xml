@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60123fbe-87b7-4a9c-91a2-e1d3b919f3da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parcial 1.html" afterPath="$PROJECT_DIR$/Parcial 1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misFunciones.js" afterPath="$PROJECT_DIR$/misFunciones.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parcialstyle.css" afterPath="$PROJECT_DIR$/parcialstyle.css" />
-    </list>
+    <list default="true" id="60123fbe-87b7-4a9c-91a2-e1d3b919f3da" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -32,7 +28,7 @@
       <file leaf-file-name="misFunciones.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/misFunciones.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
+            <state relative-caret-position="2491">
               <caret line="193" column="14" lean-forward="false" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
               <folding />
             </state>
@@ -248,12 +244,12 @@
       <workItem from="1493845450876" duration="8326000" />
       <workItem from="1497755938096" duration="2964000" />
       <workItem from="1497759613909" duration="695000" />
-      <workItem from="1497792501743" duration="42995000" />
+      <workItem from="1497792501743" duration="43148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54980000" />
+    <option name="totallyTimeSpent" value="55133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -434,7 +430,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/misFunciones.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
+        <state relative-caret-position="2491">
           <caret line="193" column="14" lean-forward="false" selection-start-line="193" selection-start-column="14" selection-end-line="193" selection-end-column="14" />
           <folding />
         </state>
