@@ -72,10 +72,6 @@ function verifvaloringresado(id) {
         alert("Se ingreso un valor invalido en " + id);
         document.getElementById(id).value = "";
     }
-    else if (i < 0) {
-        alert("Los valores no pueden ser negativos");
-        document.getElementById(id).value = "";
-    }
 }
 
 function calculo() {
