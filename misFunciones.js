@@ -4,25 +4,31 @@
 
 function mostrar_ob2(accion) {
     console.log("accion");
-
-    if (accion==="encuentro" ){
-        console.log("mostrar");
-        document.getElementById('objeto2').style.display = 'block';
-        document.getElementById('1').style.display = 'none';
-        document.getElementById('2').style.display = 'block';
-        document.getElementById('3').style.display = 'none';
-        document.getElementById('ace').style.display = 'none';
-    }
-
-    else if (accion==="mru"){
-        console.log("ocultar");
-        document.getElementById('objeto2').style.display = 'none';
-        document.getElementById('ace').style.display = 'none';
-    }
-    if (accion==="mruv"){
-        console.log("ocultar");
-        document.getElementById('objeto2').style.display = 'none';
-        document.getElementById('ace').style.display = 'block';
+    switch (accion) {
+        case "encuentro":
+            console.log("mostrar");
+            document.getElementById('objeto2').style.display = 'block';
+            document.getElementById('1').style.display = 'none';
+            document.getElementById('2').style.display = 'block';
+            document.getElementById('3').style.display = 'none';
+            document.getElementById('ace').style.display = 'none';
+            break;
+        case "mru":
+            console.log("mostrar");
+            document.getElementById('objeto2').style.display = 'none';
+            document.getElementById('1').style.display = 'block';
+            document.getElementById('2').style.display = 'block';
+            document.getElementById('3').style.display = 'block';
+            document.getElementById('ace').style.display = 'none';
+            break;
+        case "mruv":
+            console.log("mostrar");
+            document.getElementById('objeto2').style.display = 'none';
+            document.getElementById('1').style.display = 'block';
+            document.getElementById('2').style.display = 'block';
+            document.getElementById('3').style.display = 'block';
+            document.getElementById('ace').style.display = 'block';
+            break;
     }
 }
 
