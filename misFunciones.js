@@ -74,6 +74,18 @@ function verifvaloringresado(id) {
     }
 }
 
+function verifvalortiempo(id) {
+    var i = document.getElementById(id).value;
+    if (i < 0) {
+        alert("El valor no puede ser negativos");
+        document.getElementById(id).value = "";
+    }
+    if (isNaN(i)) {
+        alert("Se ingreso un valor invalido en " + id);
+        document.getElementById(id).value = "";
+    }
+}
+
 function calculo() {
 
 
