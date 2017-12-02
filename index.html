@@ -43,7 +43,7 @@
 
         <div id="1"><label for="Xo">Distancia inicial (Xo)</label>
             <br>
-            <input type="text" name="Xo" id="Xo" onchange="verifvaloringresado(this.id)">
+            <input type="text" name="Xo" id="Xo" onchange="verifvaloringresado(this.id); borrarcanvas(); borrarreultados()">
             <label>
                 <select name="unidadXo" id="unidadXo">
                     <option value="Metros">Metros</option>
@@ -55,7 +55,7 @@
         </div>
         <div id="2"><label for="Vo">Velocidad inicial (Vo)</label>
             <br>
-            <input type="text" name="Vo" id="Vo" onchange="verifvaloringresado(this.id)">
+            <input type="text" name="Vo" id="Vo" onchange="verifvaloringresado(this.id); borrarcanvas(); borrarreultados()">
             <label>
                 <select name="unidadVo" id="unidadVo">
                     <option value="m/s">m/s</option>
@@ -66,7 +66,7 @@
         </div>
         <div id="3"><label for="t">Tiempo (t)</label>
             <br>
-            <input type="text" name="t" id="t" onchange="verifvalortiempo(this.id)">
+            <input type="text" name="t" id="t" onchange="verifvalortiempo(this.id); borrarcanvas(); borrarreultados()">
             <label>
                 <select name="unidadt" id="unidadt">
                     <option value="s">Segundos</option>
@@ -77,7 +77,7 @@
         <div id="ace">
             <label for="a">Aceleracion</label>
             <br>
-            <input type="text" name="a" id="a" onchange="verifvaloringresado(this.id)">
+            <input type="text" name="a" id="a" onchange="verifvaloringresado(this.id); borrarcanvas(); borrarreultados()">
             <label>
                 <select name="unidada" id="unidada">
                     <option value="m/s2">m/s2</option>
@@ -91,7 +91,7 @@
 
             <label for="Xo2">Distancia entre Objetos (Xo)</label>
             <br>
-            <input type="text" name="Xo2" id="Xo2" onchange="verifvaloringresado(this.id)">
+            <input type="text" name="Xo2" id="Xo2" onchange="verifvaloringresado(this.id); borrarcanvas(); borrarreultados()">
             <label>
                 <select name="unidadXo2" id="unidadXo2">
                     <option value="Metros">Metros</option>
@@ -103,7 +103,7 @@
 
             <label for="Vo2">Velocidad Objeto 2 (Vo)</label>
             <br>
-            <input type="text" name="Vo2" id="Vo2" onchange="verifvaloringresado(this.id)">
+            <input type="text" name="Vo2" id="Vo2" onchange="verifvaloringresado(this.id); borrarcanvas(); borrarreultados()">
             <label>
                 <select name="unidadVo2" id="unidadVo2">
                     <option value="m/s">m/s</option>

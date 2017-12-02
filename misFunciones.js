@@ -87,6 +87,25 @@ function verifvalortiempo(id) {
     }
 }
 
+function CambiarComaPorPunto(n) {
+    n.value = n.value.replace(/,/g, ".");
+}
+
+function borrarcanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, c.width, c.height);
+}
+
+function borrarreultados(){
+    document.getElementById("Vfr").innerHTML="";
+    document.getElementById("Xr").innerHTML="";
+    document.getElementById("Af").innerHTML="";
+    document.getElementById("Te").innerHTML="";
+    document.getElementById("D1").innerHTML="";
+    document.getElementById("D2").innerHTML="";
+}
+
 function calculo() {
 
 
