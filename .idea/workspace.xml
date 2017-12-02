@@ -22,21 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-301">
-              <caret line="105" column="124" lean-forward="false" selection-start-line="105" selection-start-column="124" selection-end-line="105" selection-end-column="124" />
+            <state relative-caret-position="300">
+              <caret line="33" column="142" lean-forward="false" selection-start-line="33" selection-start-column="142" selection-end-line="33" selection-end-column="142" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="misFunciones.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="misFunciones.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/misFunciones.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="105" column="47" lean-forward="false" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
+            <state relative-caret-position="386">
+              <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -63,8 +63,8 @@
         <option value="$PROJECT_DIR$/Acerca.html" />
         <option value="$PROJECT_DIR$/parcialstyle.css" />
         <option value="$PROJECT_DIR$/Parcial 1.html" />
-        <option value="$PROJECT_DIR$/misFunciones.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/misFunciones.js" />
       </list>
     </option>
   </component>
@@ -224,12 +224,12 @@
       <workItem from="1497759613909" duration="695000" />
       <workItem from="1497792501743" duration="43354000" />
       <workItem from="1512162015333" duration="4048000" />
-      <workItem from="1512170329084" duration="8627000" />
+      <workItem from="1512170329084" duration="9907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68014000" />
+    <option name="totallyTimeSpent" value="69294000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,6 +469,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="995" column="0" lean-forward="false" selection-start-line="995" selection-start-column="0" selection-end-line="995" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -504,18 +505,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/misFunciones.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="105" column="47" lean-forward="false" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
+        <state relative-caret-position="300">
+          <caret line="33" column="142" lean-forward="false" selection-start-line="33" selection-start-column="142" selection-end-line="33" selection-end-column="142" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/misFunciones.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-301">
-          <caret line="105" column="124" lean-forward="false" selection-start-line="105" selection-start-column="124" selection-end-line="105" selection-end-column="124" />
+        <state relative-caret-position="386">
+          <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
           <folding />
         </state>
       </provider>

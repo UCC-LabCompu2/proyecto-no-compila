@@ -87,7 +87,7 @@ function verifvalortiempo(id) {
     }
 }
 
-function CambiarComaPorPunto(n) {
+function ComaPorPunto(n) {
     n.value = n.value.replace(/,/g, ".");
 }
 
@@ -104,6 +104,15 @@ function borrarreultados(){
     document.getElementById("Te").innerHTML="";
     document.getElementById("D1").innerHTML="";
     document.getElementById("D2").innerHTML="";
+}
+
+function borrardatosinput() {
+    document.getElementById("Xo").value="";
+    document.getElementById("Vo").value="";
+    document.getElementById("t").value="";
+    document.getElementById("a").value="";
+    document.getElementById("Xo2").value="";
+    document.getElementById("Vo2").value="";
 }
 
 function calculo() {
