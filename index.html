@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fisica 1 - Cinemática</title>
+    <link rel="stylesheet" href="parcialstyle.css">
+    <script type="text/javascript" src="misFunciones.js"></script>
+
+</head>
+<body>
+<header>
+    <img src="imagenes/4.png" id="logo">
+</header>
+<a href="Acerca.html" target="_self">
+    <button type="button" class="boton1" >Acerca de</button>
+</a>
+
+<a href="Ayuda.html" target="_self">
+    <button type="button" class="boton2">Ayuda</button>
+</a>
+
+<div id="Cálculo">
+
+    <div id="parametros">
+
+        <form action="">
+
+            <h1>Cinemática</h1>
+            <table>
+                <tr>
+                    <td>
+                        <input id="mru" type="radio" name="cine" value="mru" onchange="mostrar_ob2(this.value)">MRU<br>
+                        <input id="mruv" type="radio" name="cine" value="mruv" onchange="mostrar_ob2(this.value)">MRUV<br>
+                        <input id="encuentro" type="radio" name="cine" value="encuentro" onchange="mostrar_ob2(this.value)">ENCUENTRO<br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+
+        <u>Objeto 1</u>
+        <br><br>
+
+        <div id="1"><label for="Xo">Distancia inicial (Xo)</label>
+            <br>
+            <input type="text" name="Xo" id="Xo" onchange="verifvaloringresado(this.id)">
+            <label>
+                <select name="unidadXo" id="unidadXo">
+                    <option value="Metros">Metros</option>
+                    <option value="Kilometros">Kilometros</option>
+                    <option value="Centimetros">Centimetros</option>
+                </select>
+            </label>
+            <br><br>
+        </div>
+        <div id="2"><label for="Vo">Velocidad inicial (Vo)</label>
+            <br>
+            <input type="text" name="Vo" id="Vo" onchange="verifvaloringresado(this.id)">
+            <label>
+                <select name="unidadVo" id="unidadVo">
+                    <option value="m/s">m/s</option>
+                    <option value="k/h">k/h</option>
+                </select>
+            </label>
+            <br><br>
+        </div>
+        <div id="3"><label for="t">Tiempo (t)</label>
+            <br>
+            <input type="text" name="t" id="t" onchange="verifvalortiempo(this.id)">
+            <label>
+                <select name="unidadt" id="unidadt">
+                    <option value="s">Segundos</option>
+                </select>
+            </label>
+            <br><br>
+        </div>
+        <div id="ace">
+            <label for="a">Aceleracion</label>
+            <br>
+            <input type="text" name="a" id="a" onchange="verifvaloringresado(this.id)">
+            <label>
+                <select name="unidada" id="unidada">
+                    <option value="m/s2">m/s2</option>
+                </select>
+            </label>
+            <br><br>
+        </div>
+        <div id="objeto2">
+            <u>Objeto 2</u>
+            <br><br>
+
+            <label for="Xo2">Distancia entre Objetos (Xo)</label>
+            <br>
+            <input type="text" name="Xo2" id="Xo2" onchange="verifvaloringresado(this.id)">
+            <label>
+                <select name="unidadXo2" id="unidadXo2">
+                    <option value="Metros">Metros</option>
+                    <option value="Kilometros">Kilometros</option>
+                    <option value="Centimetros">Centimetros</option>
+                </select>
+            </label>
+            <br><br>
+
+            <label for="Vo2">Velocidad Objeto 2 (Vo)</label>
+            <br>
+            <input type="text" name="Vo2" id="Vo2" onchange="verifvaloringresado(this.id)">
+            <label>
+                <select name="unidadVo2" id="unidadVo2">
+                    <option value="m/s">m/s</option>
+                    <option value="k/h">k/h</option>
+                </select>
+            </label>
+            <br><br>
+
+        </div>
+        <input onclick="calculo()" type="button" name="boton" class="botonc" value="Calcular">
+        <input onclick="reset()" type="button" name="boton" class="botonc" value="Resetear">
+
+    </div>
+
+    <div id="grafico">
+        <div id="grafico1">
+            <canvas id="myCanvas" height="540px" width="815px">
+                Tu navegador no soporta el tag de HTML5 canvas.
+            </canvas>
+        </div>
+
+        <div id="resultados">
+            <u>RESULTADOS</u>
+
+            <div><output id="Vfr"></output></div>
+            <div><output id="Xr"></output></div>
+            <div><output id="Tfr"></output></div>
+            <div><output id="Af"></output></div>
+            <div><output id="Te"></output></div>
+            <div><output id="D1"></output></div>
+            <div><output id="D2"></output></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
