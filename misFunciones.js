@@ -43,6 +43,7 @@ function reset() {
     document.getElementById("a").value="";
     document.getElementById("Xo2").value="";
     document.getElementById("Vo2").value="";
+    document.getElementById("resultados").innerHTML="";
 
 }
 
