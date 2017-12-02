@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="60123fbe-87b7-4a9c-91a2-e1d3b919f3da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/misFunciones.js" afterPath="$PROJECT_DIR$/misFunciones.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +24,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="33" column="142" lean-forward="false" selection-start-line="33" selection-start-column="142" selection-end-line="33" selection-end-column="142" />
+            <state relative-caret-position="324">
+              <caret line="115" column="27" lean-forward="true" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -35,8 +34,8 @@
       <file leaf-file-name="misFunciones.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/misFunciones.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+            <state relative-caret-position="419">
+              <caret line="135" column="50" lean-forward="true" selection-start-line="135" selection-start-column="50" selection-end-line="135" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -224,12 +223,12 @@
       <workItem from="1497759613909" duration="695000" />
       <workItem from="1497792501743" duration="43354000" />
       <workItem from="1512162015333" duration="4048000" />
-      <workItem from="1512170329084" duration="9907000" />
+      <workItem from="1512170329084" duration="15658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69294000" />
+    <option name="totallyTimeSpent" value="75045000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -507,16 +506,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="33" column="142" lean-forward="false" selection-start-line="33" selection-start-column="142" selection-end-line="33" selection-end-column="142" />
+        <state relative-caret-position="324">
+          <caret line="115" column="27" lean-forward="true" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/misFunciones.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
+        <state relative-caret-position="419">
+          <caret line="135" column="50" lean-forward="true" selection-start-line="135" selection-start-column="50" selection-end-line="135" selection-end-column="50" />
           <folding />
         </state>
       </provider>

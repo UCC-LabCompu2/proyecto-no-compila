@@ -69,10 +69,12 @@ function convert_unidades(id) {
 
 function verifvaloringresado(id) {
     var i = document.getElementById(id).value;
+    i = i.toString().replace(/,/g,'.');
     if (isNaN(i)) {
         alert("Se ingreso un valor invalido en " + id);
         document.getElementById(id).value = "";
-    }
+    } else
+        return i;
 }
 
 function verifvalortiempo(id) {
@@ -87,9 +89,8 @@ function verifvalortiempo(id) {
     }
 }
 
-function ComaPorPunto(n) {
-    n.value = n.value.replace(/,/g, ".");
-}
+
+
 
 function borrarcanvas() {
     var c = document.getElementById("myCanvas");
@@ -118,12 +119,35 @@ function borrardatosinput() {
 function calculo() {
 
 
-    var Xo=Number(document.getElementById("Xo").value) * convert_unidades("unidadXo");
-    var Vo=Number(document.getElementById("Vo").value) * convert_unidades("unidadVo");
-    var t=Number(document.getElementById("t").value);
-    var a=Number(document.getElementById("a").value);
-    var d=Number(document.getElementById("Xo2").value) * convert_unidades("unidadXo2");
-    var Vo2=Number(document.getElementById("Vo2").value) * convert_unidades("unidadVo2");
+    var Xoa = document.getElementById("Xo").value;
+    var Xob = Xoa.toString().replace(/,/g,'.');
+    var Xo = Xob*convert_unidades("unidadXo");
+
+    var Voa = document.getElementById("Vo").value;
+    var Vob = Voa.toString().replace(/,/g,'.');
+    var Vo = Vob * convert_unidades("unidadVo2");
+
+    var ta = document.getElementById("t").value;
+    var t = ta.toString().replace(/,/g,'.');
+
+    var aa = document.getElementById("a").value;
+    var a = aa.toString().replace(/,/g,'.');
+
+    var da = document.getElementById("Xo2").value;
+    var db = da.toString().replace(/,/g,'.');
+    var d = db * convert_unidades("unidadXo2");
+
+    var Vo2a = document.getElementById("Vo2").value;
+    var Vo2b = Vo2a.toString().replace(/,/g,'.');
+    var Vo2 = Vo2b * convert_unidades("unidadVo2");
+
+    /*
+     var Xo=Number(document.getElementById("Xo").value) * convert_unidades("unidadXo");
+     var Vo=Number(document.getElementById("Vo").value) * convert_unidades("unidadVo");
+     var t=Number(document.getElementById("t").value);
+     var a=Number(document.getElementById("a").value);
+     var d=Number(document.getElementById("Xo2").value) * convert_unidades("unidadXo2");
+     var Vo2=Number(document.getElementById("Vo2").value) * convert_unidades("unidadVo2");*/
 
 
     if(document.getElementById("mru").checked===true){
