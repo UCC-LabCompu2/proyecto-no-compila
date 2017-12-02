@@ -43,12 +43,6 @@ function reset() {
     document.getElementById("a").value="";
     document.getElementById("Xo2").value="";
     document.getElementById("Vo2").value="";
-    document.getElementById("Vfr").value="";
-    document.getElementById("Xr").value="";
-    document.getElementById("Af").value="";
-    document.getElementById("Te").value="";
-    document.getElementById("D1").value="";
-    document.getElementById("D2").value="";
 
 }
 
@@ -98,28 +92,36 @@ function calculo() {
 
 
     if(document.getElementById("mru").checked===true){
-        var Xf=Xo+Vo*t;
-        var Vf=(Xf-Xo)/t;
-        dib1();
+        var Xf1=Xo+Vo*t;
+        var Vf1=(Xf1-Xo)/t;
+        var Xf=Xf1.toFixed(2);
+        var Vf=Vf1.toFixed(2);
+        dib1(Xo);
         document.getElementById("Vfr").innerHTML="Velocidad="+Vf+"m/s";
         document.getElementById("Xr").innerHTML="Distancia="+Xf+"metros";
     }
 
 
     else if(document.getElementById("mruv").checked===true){
-        var Xfv=Xo+Vo*t+1/2*a*(t*t);
-        var Vfv=Vo+a*t;
-        var av=(Vfv-Vo)/(t);
-        dib2();
+        var Xfv1=Xo+Vo*t+1/2*a*(t*t);
+        var Vfv1=Vo+a*t;
+        var av1=(Vfv1-Vo)/(t);
+        var Xfv=Xfv1.toFixed(2);
+        var Vfv=Vfv1.toFixed(2);
+        var av=av1.toFixed(2);
+        dib2(Xo);
         document.getElementById("Vfr").innerHTML="Velocidad="+Vfv+"m/s";
         document.getElementById("Xr").innerHTML="Distancia="+Xfv+"metros";
         document.getElementById("Af").innerHTML="Aceleracion="+av+"m/s";
     }
 
     else if(document.getElementById("encuentro").checked===true){
-        var te=d/(Vo+Vo2);
-        var d1=Vo*te;
-        var d2=Vo2*te;
+        var te1=d/(Vo+Vo2);
+        var d11=Vo*te1;
+        var d21=Vo2*te1;
+        var te=te1.toFixed(2);
+        var d1=d11.toFixed(2);
+        var d2=d21.toFixed(2);
         dib3(te,d1,d2);
         document.getElementById("Te").innerHTML="Tiempo de encuentro="+te+"s";
         document.getElementById("D1").innerHTML="distancia recorrida objeto 1="+d1+"m";
@@ -128,7 +130,7 @@ function calculo() {
     }
 }
 
-function dib1() {
+function dib1(Xo) {
     var c=document.getElementById("myCanvas");
     var ctx=c.getContext("2d");
     var x=50;
@@ -153,9 +155,9 @@ function dib1() {
     ctx.moveTo(x,500);
     ctx.lineTo(x,200);
     ctx.stroke();
-    var xi=(document.getElementById("Xo").value);
+    Xo=Xo.toFixed(2);
     ctx.font = '20px Arial';
-    ctx.fillText(Number(xi)+"m",30,325);
+    ctx.fillText(Number(Xo)+"m",30,325);
 
     ctx.lineWidth=3;
 
@@ -165,7 +167,7 @@ function dib1() {
     ctx.stroke();
 }
 
-function dib2() {
+function dib2(Xo) {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     var x = 50;
@@ -190,9 +192,9 @@ function dib2() {
     ctx.moveTo(x, 500);
     ctx.lineTo(x, 200);
     ctx.stroke();
-    var xi = (document.getElementById("Xo").value);
+    Xo=Xo.toFixed(2);
     ctx.font = '20px Arial';
-    ctx.fillText(Number(xi)+"m", 30, 325);
+    ctx.fillText(Number(Xo)+"m", 30, 325);
 
     ctx.lineWidth = 3;
 
