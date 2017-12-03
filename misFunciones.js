@@ -79,6 +79,7 @@ function verifvaloringresado(id) {
 
 function verifvalortiempo(id) {
     var i = document.getElementById(id).value;
+    i = i.toString().replace(/,/g,'.');
     if (i < 0) {
         alert("El valor no puede ser negativos");
         document.getElementById(id).value = "";
@@ -141,21 +142,13 @@ function calculo() {
     var Vo2b = Vo2a.toString().replace(/,/g,'.');
     var Vo2 = Vo2b * convert_unidades("unidadVo2");
 
-    /*
-     var Xo=Number(document.getElementById("Xo").value) * convert_unidades("unidadXo");
-     var Vo=Number(document.getElementById("Vo").value) * convert_unidades("unidadVo");
-     var t=Number(document.getElementById("t").value);
-     var a=Number(document.getElementById("a").value);
-     var d=Number(document.getElementById("Xo2").value) * convert_unidades("unidadXo2");
-     var Vo2=Number(document.getElementById("Vo2").value) * convert_unidades("unidadVo2");*/
-
 
     if(document.getElementById("mru").checked===true){
         var Xf1=Xo+Vo*t;
         var Vf1=(Xf1-Xo)/t;
         var Xf=Xf1.toFixed(2);
         var Vf=Vf1.toFixed(2);
-        dib1(Xo);
+        dib1(Xo,t,Xf);
         document.getElementById("Vfr").innerHTML="Velocidad="+Vf+"m/s";
         document.getElementById("Xr").innerHTML="Distancia="+Xf+"metros";
     }
@@ -168,7 +161,7 @@ function calculo() {
         var Xfv=Xfv1.toFixed(2);
         var Vfv=Vfv1.toFixed(2);
         var av=av1.toFixed(2);
-        dib2(Xo);
+        dib2(Xo,t,Xfv);
         document.getElementById("Vfr").innerHTML="Velocidad="+Vfv+"m/s";
         document.getElementById("Xr").innerHTML="Distancia="+Xfv+"metros";
         document.getElementById("Af").innerHTML="Aceleracion="+av+"m/s";
@@ -189,48 +182,66 @@ function calculo() {
     }
 }
 
-function dib1(Xo) {
-    var c=document.getElementById("myCanvas");
-    var ctx=c.getContext("2d");
-    var x=50;
-
-
-    ctx.lineWidth= 2;
-    ctx.strokeStyle = "black";
-
-    ctx.beginPath();
-    ctx.moveTo(x,500);
-    ctx.lineTo(400,500);
-    ctx.stroke();
-
-    var ti=(document.getElementById("t").value);
-    ctx.font = '20px Arial';
-    ctx.textAlign='center';
-    ctx.fillText(Number(ti)+""+"seg",200,520);
-
-    ctx.lineWidth= 2;
-
-    ctx.beginPath();
-    ctx.moveTo(x,500);
-    ctx.lineTo(x,200);
-    ctx.stroke();
-    Xo=Xo.toFixed(2);
-    ctx.font = '20px Arial';
-    ctx.fillText(Number(Xo)+"m",30,325);
-
-    ctx.lineWidth=3;
-
-    ctx.beginPath();
-    ctx.moveTo(x,500);
-    ctx.lineTo(400,200);
-    ctx.stroke();
-}
-
-function dib2(Xo) {
+function drawArrow(fromx, fromy, tox, toy){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    var x = 50;
+    var headlen = 10;
+    var ang = Math.atan2(toy-fromy,tox-fromx);
 
+    ctx.beginPath();
+    ctx.moveTo(fromx, fromy);
+    ctx.lineTo(tox, toy);
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(tox, toy);
+    ctx.lineTo(tox-headlen*Math.cos(ang-Math.PI/7),toy-headlen*Math.sin(ang-Math.PI/7));
+    ctx.lineTo(tox-headlen*Math.cos(ang+Math.PI/7),toy-headlen*Math.sin(ang+Math.PI/7));
+    ctx.lineTo(tox, toy);
+    ctx.lineTo(tox-headlen*Math.cos(ang-Math.PI/7),toy-headlen*Math.sin(ang-Math.PI/7));
+
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = "black";
+    ctx.fill();
+}
+
+function drawArrow2(fromx, fromy, tox, toy){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var headlen = 10;
+    var ang = Math.atan2(toy-fromy,tox-fromx);
+
+    ctx.beginPath();
+    ctx.moveTo(fromx, fromy);
+    ctx.lineTo(tox, toy);
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(tox, toy);
+    ctx.lineTo(tox-headlen*Math.cos(ang-Math.PI/7),toy-headlen*Math.sin(ang-Math.PI/7));
+    ctx.lineTo(tox-headlen*Math.cos(ang+Math.PI/7),toy-headlen*Math.sin(ang+Math.PI/7));
+    ctx.lineTo(tox, toy);
+    ctx.lineTo(tox-headlen*Math.cos(ang-Math.PI/7),toy-headlen*Math.sin(ang-Math.PI/7));
+
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = "red";
+    ctx.fill();
+}
+
+
+var inter, inter2;
+function dib1(Xo,t,Xf) {
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    var x=70;
 
     ctx.lineWidth = 2;
     ctx.strokeStyle = "black";
@@ -240,12 +251,10 @@ function dib2(Xo) {
     ctx.lineTo(400, 500);
     ctx.stroke();
 
-    var ti = (document.getElementById("t").value);
     ctx.font = '20px Arial';
-    ctx.textAlign = 'center';
-    ctx.fillText(Number(ti)+""+"seg", 200, 520);
+    ctx.textAlign='center';
+    ctx.fillText(Number(t)+""+"seg",200,530);
 
-    ctx.lineWidth = 2;
 
     ctx.beginPath();
     ctx.moveTo(x, 500);
@@ -253,14 +262,77 @@ function dib2(Xo) {
     ctx.stroke();
     Xo=Xo.toFixed(2);
     ctx.font = '20px Arial';
-    ctx.fillText(Number(Xo)+"m", 30, 325);
+    ctx.fillText(Number(Xo)+"m",30,325);
 
-    ctx.lineWidth = 3;
+
+    var h=0;
+    inter = setInterval(function () {
+
+        if(Xf>500){Xf=499;}
+        if (Xf<500){
+            if (Xf<0){Xf=Xf*-1;}
+
+            if (Xf<500 && Xf>0){
+                if((Xf-h) > 0){
+                    h++;
+                    drawArrow(x+10,490,x+h,500-h);
+                }
+                else{
+                    clearInterval(inter);
+                }
+            }}
+
+
+    }, 1000 / 35);
+
+}
+
+function dib2(Xo,t,Xf) {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var x = 70;
+
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "black";
 
     ctx.beginPath();
     ctx.moveTo(x, 500);
-    ctx.lineTo(400, 200);
+    ctx.lineTo(400, 500);
     ctx.stroke();
+
+    ctx.font = '20px Arial';
+    ctx.textAlign='center';
+    ctx.fillText(Number(t)+""+"seg",200,530);
+
+
+    ctx.beginPath();
+    ctx.moveTo(x, 500);
+    ctx.lineTo(x, 200);
+    ctx.stroke();
+    Xo=Xo.toFixed(2);
+    ctx.font = '20px Arial';
+    ctx.fillText(Number(Xo)+"m",30,325);
+
+
+    var h=0;
+    inter = setInterval(function () {
+
+        if(Xf>500){Xf=499;}
+        if (Xf<500){
+            if (Xf<0){Xf=Xf*-1;}
+
+            if (Xf<500 && Xf>0){
+                if((Xf-h) > 0){
+                    h++;
+                    drawArrow(x+10,490,x+h,500-h);
+                }
+                else{
+                    clearInterval(inter);
+                }
+            }}
+
+
+    }, 1000 / 35);
 }
 
 function dib3(te,y,z) {
@@ -268,55 +340,73 @@ function dib3(te,y,z) {
     var ctx = c.getContext("2d");
     var x = 25;
 
+     ctx.lineWidth = 2;
+     ctx.strokeStyle = "black";
 
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = "black";
+     ctx.beginPath();
+     ctx.moveTo(x, 500);
+     ctx.lineTo(350, 500);
+     ctx.stroke();
 
-    ctx.beginPath();
-    ctx.moveTo(x, 500);
-    ctx.lineTo(350, 500);
-    ctx.stroke();
+     ctx.font = '20px Arial';
+     ctx.fillText(Number(te)+""+"seg", 350, 520);
 
-    ctx.font = '20px Arial';
-    ctx.fillText(Number(te)+""+"seg", 350, 520);
+     ctx.lineWidth = 2;
 
-    ctx.lineWidth = 2;
+     ctx.beginPath();
+     ctx.moveTo(x, 500);
+     ctx.lineTo(x, 200);
+     ctx.stroke();
+     ctx.font = '20px Arial';
+     ctx.fillText(Number(y)+"m", 50, 325);
 
-    ctx.beginPath();
-    ctx.moveTo(x, 500);
-    ctx.lineTo(x, 200);
-    ctx.stroke();
-    ctx.font = '20px Arial';
-    ctx.fillText(Number(y)+"m", 10, 325);
+    var h=0, a=0;
+    inter = setInterval(function () {
 
-    ctx.lineWidth = 3;
+            if (y<500 && y>0){
+                if(h<385 && a<335){
+                    h++;
+                    a++;
+                    drawArrow(x+10,490,x+h,500-a);
+                }
+                else{
+                    clearInterval(inter);
+                }
+            }
 
-    ctx.beginPath();
-    ctx.moveTo(x, 500);
-    ctx.lineTo(350, 200);
-    ctx.stroke();
 
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = "red";
+    }, 1000 / 35);
 
-    ctx.beginPath();
-    ctx.moveTo(700, 500);
-    ctx.lineTo(350, 500);
-    ctx.stroke();
+     ctx.lineWidth = 2;
+     ctx.strokeStyle = "red";
 
-    ctx.lineWidth = 2;
+     ctx.beginPath();
+     ctx.moveTo(700, 500);
+     ctx.lineTo(350, 500);
+     ctx.stroke();
 
-    ctx.beginPath();
-    ctx.moveTo(700, 500);
-    ctx.lineTo(700, 200);
-    ctx.stroke();
-    ctx.font = '20px Arial';
-    ctx.fillText(Number(z)+"m", 710, 325);
+     ctx.lineWidth = 2;
 
-    ctx.lineWidth = 3;
+     ctx.beginPath();
+     ctx.moveTo(700, 500);
+     ctx.lineTo(700, 200);
+     ctx.stroke();
+     ctx.font = '20px Arial';
+     ctx.fillText(Number(z)+"m", 740, 325);
 
-    ctx.beginPath();
-    ctx.moveTo(700, 500);
-    ctx.lineTo(350, 200);
-    ctx.stroke();
+    inter2 = setInterval(function () {
+
+        if (z<500 && z>0){
+            if(h<385 && a<335){
+                h++;
+                a++;
+                drawArrow2(700-10,490,700-h,500-a);
+            }
+            else{
+                clearInterval(inter2);
+            }
+        }
+
+
+    }, 1000 / 35);
 }
