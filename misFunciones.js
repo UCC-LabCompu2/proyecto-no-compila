@@ -2,6 +2,12 @@
  * Created by Cristian on 15/06/2017.
  */
 
+/**
+ * Muestra y oculta los datos q usaremos a la hora de ingresar los datos
+ * para calcular lo q se busca
+ * @param accion
+ */
+
 function mostrar_ob2(accion) {
     console.log("accion");
     switch (accion) {
@@ -31,7 +37,9 @@ function mostrar_ob2(accion) {
             break;
     }
 }
-
+/**
+ * busca y devuelve los valores a nulos
+ */
 function reset() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
@@ -52,6 +60,11 @@ function reset() {
 
 
 }
+/**
+ * convierte los datos ingresados a los unidades seleccionadas por el usuario
+ * @param id
+ * @returns {number}
+ */
 
 function convert_unidades(id) {
     id=document.getElementById(id).value;
@@ -67,6 +80,11 @@ function convert_unidades(id) {
     return 1;
 }
 
+/**
+ * verifica que los valores ingresados sean validos y no letras, y realiza el cambio de coma por punto
+ * @param id
+ */
+
 function verifvaloringresado(id) {
     var i = document.getElementById(id).value;
     i = i.toString().replace(/,/g,'.');
@@ -77,6 +95,10 @@ function verifvaloringresado(id) {
         return i;
 }
 
+/**
+ * verifica que el valor de tiempo sea valido y que no letras, y realiza el cambio de coma por punto
+ * @param id
+ */
 function verifvalortiempo(id) {
     var i = document.getElementById(id).value;
     i = i.toString().replace(/,/g,'.');
@@ -91,13 +113,18 @@ function verifvalortiempo(id) {
 }
 
 
-
+/**
+ * Limpia el canvas
+ */
 
 function borrarcanvas() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
     ctx.clearRect(0, 0, c.width, c.height);
 }
+/**
+ * Pone en nulo la seccion de resultados obtenidos
+ */
 
 function borrarreultados(){
     document.getElementById("Vfr").innerHTML="";
@@ -108,6 +135,10 @@ function borrarreultados(){
     document.getElementById("D2").innerHTML="";
 }
 
+/**
+ * Pone en nulo los valores en la seccion ingresada de datos
+ */
+
 function borrardatosinput() {
     document.getElementById("Xo").value="";
     document.getElementById("Vo").value="";
@@ -117,9 +148,14 @@ function borrardatosinput() {
     document.getElementById("Vo2").value="";
 }
 
+/**
+ * Realiza calculos a obtener
+ * Nota: realiza todos los calculos pero solo muestra los q el usuario eligio
+ */
+
 function calculo() {
 
-
+//cambia coma por punto y convierte a las unidades deseadas
     var Xoa = document.getElementById("Xo").value;
     var Xob = Xoa.toString().replace(/,/g,'.');
     var Xo = Xob*convert_unidades("unidadXo");
@@ -142,7 +178,7 @@ function calculo() {
     var Vo2b = Vo2a.toString().replace(/,/g,'.');
     var Vo2 = Vo2b * convert_unidades("unidadVo2");
 
-
+//calcula mru
     if(document.getElementById("mru").checked===true){
         var Xf1=Xo+Vo*t;
         var Vf1=(Xf1-Xo)/t;
@@ -153,7 +189,7 @@ function calculo() {
         document.getElementById("Xr").innerHTML="Distancia="+Xf+"metros";
     }
 
-
+//calcula mruv
     else if(document.getElementById("mruv").checked===true){
         var Xfv1=Xo+Vo*t+1/2*a*(t*t);
         var Vfv1=Vo+a*t;
@@ -166,7 +202,7 @@ function calculo() {
         document.getElementById("Xr").innerHTML="Distancia="+Xfv+"metros";
         document.getElementById("Af").innerHTML="Aceleracion="+av+"m/s";
     }
-
+//calcula encuentro
     else if(document.getElementById("encuentro").checked===true){
         var te1=d/(Vo+Vo2);
         var d11=Vo*te1;
@@ -181,6 +217,13 @@ function calculo() {
 
     }
 }
+/**
+ * Dibuja una flecha en las coordenadas establecidas
+ * @param fromx
+ * @param fromy
+ * @param tox
+ * @param toy
+ */
 
 function drawArrow(fromx, fromy, tox, toy){
     var c = document.getElementById("myCanvas");
@@ -208,6 +251,13 @@ function drawArrow(fromx, fromy, tox, toy){
     ctx.fillStyle = "black";
     ctx.fill();
 }
+/**
+ * misma funcion de dibujo pero realizado para encuentro
+ * @param fromx
+ * @param fromy
+ * @param tox
+ * @param toy
+ */
 
 function drawArrow2(fromx, fromy, tox, toy){
     var c = document.getElementById("myCanvas");
@@ -236,6 +286,10 @@ function drawArrow2(fromx, fromy, tox, toy){
     ctx.fill();
 }
 
+/**
+ * realiza el grafico para cuando el usuario elige mru
+ * y dibuja el resultado de distancia de acuerdo al valor obtenido
+ */
 
 var inter, inter2;
 function dib1(Xo,t,Xf) {
@@ -287,6 +341,11 @@ function dib1(Xo,t,Xf) {
 
 }
 
+/**
+ * realiza el grafico para cuando el usuario elige mruv
+ * y dibuja el resultado de distancia de acuerdo al valor obtenido
+ */
+
 function dib2(Xo,t,Xf) {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
@@ -334,6 +393,9 @@ function dib2(Xo,t,Xf) {
 
     }, 1000 / 35);
 }
+/**
+ * realiza el grafico para cuando el usuario elige encuentro
+ */
 
 function dib3(te,y,z) {
     var c = document.getElementById("myCanvas");
